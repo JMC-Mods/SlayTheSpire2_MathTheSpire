@@ -5,10 +5,8 @@ using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using MegaCrit.Sts2.Core.Nodes.Combat;
-using System;
-using System.Collections.Generic;
 
-namespace MathTheSpire
+namespace MathTheSpire.Patches
 {
     public static class ModSettings
     {
