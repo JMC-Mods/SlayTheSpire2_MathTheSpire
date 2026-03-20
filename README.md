@@ -27,7 +27,7 @@ Steam版本直接在创意工坊订阅即可（暂未开放）
 ## 🧠 1. 简介
 在头顶显示当前回合即将受到伤害的总数，以后可能更一些别的功能，有问题反馈B站JMC丶或者Github，二次分发需注明来源
 
-[演示视频（B站）](https://www.bilibili.com/video/BV1dBAHz2Ehk)
+[演示视频（B站）](https://www.bilibili.com/video/BV1ZCAxzfEuv/)
 
 [Github仓库](https://github.com/JMC2002/SlayTheSpire2_MathTheSpire)
 ## ⚙️ 2. 功能
