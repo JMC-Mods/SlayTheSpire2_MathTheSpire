@@ -12,8 +12,14 @@ namespace MathTheSpire.Patches
     {
         public static int FontSize = 28;
 
-        // 字体颜色
-        public static Color TextColor = new(1.0f, 0.4f, 0.4f, 1.0f);
+        // 致命伤害 (如果破盾后的实际伤害 >= 当前血量)
+        public static Color LethalColor = new(1.0f, 0.2f, 0.2f, 1.0f);
+
+        // 警告/部分格挡 (破盾后会掉血，但不致死)
+        public static Color WarningColor = new(0.4f, 0.7f, 1.0f, 1.0f);
+
+        // 完全安全 (护甲 >= 伤害)
+        public static Color SafeColor = new(0.4f, 1.0f, 0.6f, 1.0f);
 
         // 字体描边大小和颜色
         public static int OutlineSize = 6;
@@ -42,7 +48,6 @@ namespace MathTheSpire.Patches
                         CustomMinimumSize = new Vector2(200, 50)
                     };
 
-                    damageLabel.AddThemeColorOverride("font_color", ModSettings.TextColor);
                     damageLabel.AddThemeFontSizeOverride("font_size", ModSettings.FontSize);
 
                     damageLabel.AddThemeColorOverride("font_outline_color", ModSettings.OutlineColor);
@@ -113,7 +118,34 @@ namespace MathTheSpire.Patches
 
                 if (totalIncomingDamage > 0)
                 {
-                    damageLabel.Text = $"{totalIncomingDamage}";
+                    // 获取玩家当前护甲和当前血量
+                    int currentBlock = playerCreature.Block;
+                    int currentHp = playerCreature.CurrentHp;
+
+                    // 计算实际受伤
+                    int actualDamage = Math.Max(0, totalIncomingDamage - currentBlock);
+
+                    if (currentBlock > 0)
+                    {
+                        damageLabel.Text = $"{totalIncomingDamage} ({actualDamage})";
+                    }
+                    else
+                    {
+                        damageLabel.Text = $"{totalIncomingDamage}";
+                    }
+
+                    if (actualDamage >= currentHp)
+                    {
+                        damageLabel.AddThemeColorOverride("font_color", ModSettings.LethalColor);
+                    }
+                    else if (actualDamage == 0)
+                    {
+                        damageLabel.AddThemeColorOverride("font_color", ModSettings.SafeColor);
+                    }
+                    else
+                    {
+                        damageLabel.AddThemeColorOverride("font_color", ModSettings.WarningColor);
+                    }
                 }
                 else
                 {
