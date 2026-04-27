@@ -1,6 +1,7 @@
 ﻿using Godot;
 using HarmonyLib;
 using MathTheSpire.Core;
+using System.Reflection;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
@@ -77,13 +78,79 @@ namespace MathTheSpire.Patches
             }
         }
 
+        private const BindingFlags InstanceFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+        private const BindingFlags StaticFlags = BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic;
+
+        private static readonly Lazy<PropertyInfo?> CreatureCombatStateProperty = new(() =>
+            typeof(Creature).GetProperty("CombatState", InstanceFlags));
+
+        private static readonly Lazy<PropertyInfo?> CombatManagerInstanceProperty = new(() =>
+            typeof(CombatManager).GetProperty("Instance", StaticFlags));
+
+        private static readonly Lazy<MethodInfo?> CombatManagerDebugOnlyGetStateMethod = new(() =>
+            typeof(CombatManager)
+                .GetMethods(InstanceFlags)
+                .FirstOrDefault(method => method.Name == "DebugOnlyGetState" && method.GetParameters().Length == 0));
+
+        private static bool _combatStateLookupWarningLogged;
+
+        private static CombatState? GetCombatStateCompat(Creature? playerCreature)
+        {
+            // 0.103: Creature.CombatState 的 getter 签名是 CombatState? get_CombatState()。
+            // 0.104 Beta: getter 签名变成 ICombatState? get_CombatState()。
+            // CLR 的方法签名包含返回类型，所以无论编译面向哪个版本，直接写
+            // playerCreature.CombatState 都会在另一个版本里触发 MissingMethodException。
+            // CombatManager.DebugOnlyGetState() 在 0.103 和 0.104 里仍然都是 CombatState?，
+            // 因此优先从这里取；同时保持反射回退，避免静态绑定旧 getter。
+            try
+            {
+                var combatManager = CombatManagerInstanceProperty.Value?.GetValue(null);
+                if (combatManager != null && CombatManagerDebugOnlyGetStateMethod.Value is { } debugOnlyGetStateMethod)
+                {
+                    if (debugOnlyGetStateMethod.Invoke(combatManager, null) is CombatState managerState)
+                    {
+                        return managerState;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogCombatStateLookupWarningOnce($"通过 CombatManager.DebugOnlyGetState 获取战斗状态失败，尝试回退到 Creature.CombatState: {ex.Message}");
+            }
+
+            try
+            {
+                if (playerCreature != null && CreatureCombatStateProperty.Value is { } creatureCombatStateProperty)
+                {
+                    if (creatureCombatStateProperty.GetValue(playerCreature) is CombatState creatureCombatState)
+                    {
+                        return creatureCombatState;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogCombatStateLookupWarningOnce($"通过 Creature.CombatState 获取战斗状态失败: {ex.Message}");
+            }
+
+            return null;
+        }
+
+        private static void LogCombatStateLookupWarningOnce(string message)
+        {
+            if (_combatStateLookupWarningLogged) return;
+
+            _combatStateLookupWarningLogged = true;
+            ModLogger.Warn(message);
+        }
+
         private static void UpdateDamageText(Creature playerCreature, Label damageLabel)
         {
             try
             {
                 if (!GodotObject.IsInstanceValid(damageLabel)) return;
 
-                var combatState = playerCreature?.CombatState ?? CombatManager.Instance?.DebugOnlyGetState();
+                var combatState = GetCombatStateCompat(playerCreature);
 
                 if (combatState == null || playerCreature == null || playerCreature.IsDead)
                 {
