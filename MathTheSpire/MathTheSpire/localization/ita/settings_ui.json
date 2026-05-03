@@ -1,0 +1,9 @@
+{
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "Colori danno",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "Colore danno letale",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "Colore usato quando il danno non bloccato ucciderebbe il giocatore. Le modifiche si applicano al prossimo aggiornamento del numero di danno.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "Colore avviso danno",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "Colore usato quando il blocco non basta, ma il danno non e letale. Le modifiche si applicano al prossimo aggiornamento.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "Colore blocco sicuro",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Colore usato quando il blocco attuale assorbe completamente il danno in arrivo. Le modifiche si applicano al prossimo aggiornamento."
+}

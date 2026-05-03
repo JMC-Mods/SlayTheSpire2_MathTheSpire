@@ -1,0 +1,9 @@
+{
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "피해 색상",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "치명 피해 색상",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "막지 못한 실제 피해로 플레이어가 사망할 때 사용하는 색상입니다. 변경 사항은 다음 피해 숫자 갱신부터 적용됩니다.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "피해 경고 색상",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "방어도가 부족하지만 치명적이지 않을 때 사용하는 색상입니다. 변경 사항은 다음 피해 숫자 갱신부터 적용됩니다.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "안전 방어 색상",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "현재 방어도로 들어오는 피해를 완전히 막을 수 있을 때 사용하는 색상입니다. 변경 사항은 다음 피해 숫자 갱신부터 적용됩니다."
+}

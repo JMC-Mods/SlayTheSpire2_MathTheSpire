@@ -1,0 +1,9 @@
+{
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "ダメージ色",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "致命ダメージの色",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "ブロックされなかった実ダメージでプレイヤーが倒れる場合に使う色です。変更は次回のダメージ表示更新から反映されます。",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "被ダメージ警告の色",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "ブロックが足りないが致命傷ではない場合に使う色です。変更は次回のダメージ表示更新から反映されます。",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "安全ブロックの色",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "現在のブロックで受けるダメージを完全に防げる場合に使う色です。変更は次回のダメージ表示更新から反映されます。"
+}

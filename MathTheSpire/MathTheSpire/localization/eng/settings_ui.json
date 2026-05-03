@@ -1,0 +1,9 @@
+{
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "Damage colors",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "Lethal damage color",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "Color used when unblocked damage would kill the player. Changes apply on the next damage number refresh.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "Injury warning color",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "Color used when block is not enough, but the damage is not lethal. Changes apply on the next damage number refresh.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "Safe block color",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Color used when current block can fully absorb incoming damage. Changes apply on the next damage number refresh."
+}

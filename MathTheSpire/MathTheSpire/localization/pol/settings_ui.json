@@ -1,0 +1,9 @@
+{
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "Kolory obrazen",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "Kolor smiertelnych obrazen",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "Kolor uzywany, gdy nieblokowane obrazenia zabilby gracza. Zmiany obowiazuja od nastepnego odswiezenia liczby obrazen.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "Kolor ostrzezenia o obrazeniach",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "Kolor uzywany, gdy blok jest niewystarczajacy, ale obrazenia nie sa smiertelne. Zmiany obowiazuja od nastepnego odswiezenia.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "Kolor bezpiecznego bloku",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Kolor uzywany, gdy obecny blok w pelni pochlonie nadchodzace obrazenia. Zmiany obowiazuja od nastepnego odswiezenia."
+}

@@ -1,0 +1,9 @@
+{
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "สีความเสียหาย",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "สีความเสียหายถึงตาย",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "สีที่ใช้เมื่อความเสียหายจริงที่ไม่ถูกบล็อกจะทำให้ผู้เล่นตาย การเปลี่ยนแปลงจะมีผลในการรีเฟรชตัวเลขความเสียหายครั้งถัดไป",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "สีเตือนการบาดเจ็บ",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "สีที่ใช้เมื่อบล็อกไม่พอ แต่ความเสียหายยังไม่ถึงตาย การเปลี่ยนแปลงจะมีผลในการรีเฟรชครั้งถัดไป",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "สีบล็อกปลอดภัย",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "สีที่ใช้เมื่อบล็อกปัจจุบันสามารถรับความเสียหายที่จะเข้ามาได้ทั้งหมด การเปลี่ยนแปลงจะมีผลในการรีเฟรชครั้งถัดไป"
+}

@@ -1,5 +1,6 @@
 ﻿using Godot;
 using HarmonyLib;
+using JmcModLib.Utils;
 using MathTheSpire.Core;
 using System.Reflection;
 using MegaCrit.Sts2.Core.Combat;
@@ -12,15 +13,6 @@ namespace MathTheSpire.Patches
     public static class ModSettings
     {
         public static int FontSize = 28;
-
-        // 致命伤害 (如果破盾后的实际伤害 >= 当前血量)
-        public static Color LethalColor = new(1.0f, 0.2f, 0.2f, 1.0f);
-
-        // 警告/部分格挡 (破盾后会掉血，但不致死)
-        public static Color WarningColor = new(0.4f, 0.7f, 1.0f, 1.0f);
-
-        // 完全安全 (护甲 >= 伤害)
-        public static Color SafeColor = new(0.4f, 1.0f, 0.6f, 1.0f);
 
         // 字体描边大小和颜色
         public static int OutlineSize = 6;
@@ -203,15 +195,15 @@ namespace MathTheSpire.Patches
 
                     if (actualDamage >= currentHp)
                     {
-                        damageLabel.AddThemeColorOverride("font_color", ModSettings.LethalColor);
+                        damageLabel.AddThemeColorOverride("font_color", MathTheSpireSettings.LethalDamageColor);
                     }
                     else if (actualDamage == 0)
                     {
-                        damageLabel.AddThemeColorOverride("font_color", ModSettings.SafeColor);
+                        damageLabel.AddThemeColorOverride("font_color", MathTheSpireSettings.SafeDamageColor);
                     }
                     else
                     {
-                        damageLabel.AddThemeColorOverride("font_color", ModSettings.WarningColor);
+                        damageLabel.AddThemeColorOverride("font_color", MathTheSpireSettings.WarningDamageColor);
                     }
                 }
                 else

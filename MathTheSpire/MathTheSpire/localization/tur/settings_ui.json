@@ -1,0 +1,9 @@
+{
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "Hasar renkleri",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "Olumcul hasar rengi",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "Engellenmeyen hasar oyuncuyu oldurecekse kullanilan renk. Degisiklikler bir sonraki hasar sayisi yenilemesinde uygulanir.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "Yaralanma uyari rengi",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "Blok yeterli degil ama hasar olumcul degilse kullanilan renk. Degisiklikler bir sonraki yenilemede uygulanir.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "Guvenli blok rengi",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Mevcut blok gelen hasari tamamen emebiliyorsa kullanilan renk. Degisiklikler bir sonraki yenilemede uygulanir."
+}

@@ -1,0 +1,9 @@
+{
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "Schadensfarben",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "Farbe fuer toedlichen Schaden",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "Farbe, wenn ungeblockter Schaden den Spieler toeten wuerde. Aenderungen gelten ab der naechsten Aktualisierung der Schadenszahl.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "Farbe fuer Verwundungswarnung",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "Farbe, wenn Block nicht ausreicht, der Schaden aber nicht toedlich ist. Aenderungen gelten ab der naechsten Aktualisierung.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "Farbe fuer sicheren Block",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Farbe, wenn der aktuelle Block den eingehenden Schaden vollstaendig auffaengt. Aenderungen gelten ab der naechsten Aktualisierung."
+}
