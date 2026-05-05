@@ -1,4 +1,4 @@
-﻿using Godot;
+using Godot;
 using HarmonyLib;
 using JmcModLib.Utils;
 using MathTheSpire.Core;
@@ -22,52 +22,66 @@ namespace MathTheSpire.Patches
         public static float HeightOffset = -350f;
     }
 
-    [HarmonyPatch(typeof(Creature), nameof(Creature.CreateVisuals))]
-    public static class Creature_CreateVisuals_Patch
+    [HarmonyPatch(typeof(NCreature), "_Ready")]
+    public static class NCreature_Ready_Patch
     {
-        public static void Postfix(Creature __instance, ref NCreatureVisuals? __result)
+        private const string DamageLabelNodeName = "MathTheSpireDamageLabel";
+        private const string UpdateTimerNodeName = "MathTheSpireDamageTimer";
+        private const int DamageLabelZIndex = 7;
+
+        public static void Postfix(NCreature __instance)
         {
-            if (__result != null && __instance.IsPlayer)
+            if (__instance.Entity is not { IsPlayer: true } playerCreature)
             {
-                try
-                {
-                    var damageLabel = new Label
-                    {
-                        Text = "",
-                        HorizontalAlignment = HorizontalAlignment.Center, // 文本居中对齐
-                        VerticalAlignment = VerticalAlignment.Center,
-                        ZIndex = 2,
-
-                        CustomMinimumSize = new Vector2(200, 50)
-                    };
-
-                    damageLabel.AddThemeFontSizeOverride("font_size", ModSettings.FontSize);
-
-                    damageLabel.AddThemeColorOverride("font_outline_color", ModSettings.OutlineColor);
-                    damageLabel.AddThemeConstantOverride("outline_size", ModSettings.OutlineSize);
-
-                    __result.AddChild(damageLabel);
-
-                    damageLabel.Position = new Vector2(-100, ModSettings.HeightOffset);
-
-                    var updateTimer = new Godot.Timer
-                    {
-                        WaitTime = 0.1,
-                        Autostart = true
-                    };
-
-                    updateTimer.Timeout += () =>
-                    {
-                        UpdateDamageText(__instance, damageLabel);
-                    };
-
-                    __result.AddChild(updateTimer);
-                }
-                catch (Exception ex)
-                {
-                    ModLogger.Error($"挂载 UI 时发生异常: {ex.Message}");
-                }
+                return;
             }
+
+            try
+            {
+                if (__instance.GetNodeOrNull<Label>(DamageLabelNodeName) != null)
+                {
+                    return;
+                }
+
+                var damageLabel = CreateDamageLabel();
+                __instance.AddChild(damageLabel);
+
+                var updateTimer = new Godot.Timer
+                {
+                    Name = UpdateTimerNodeName,
+                    WaitTime = 0.1,
+                    Autostart = true
+                };
+
+                updateTimer.Timeout += () => UpdateDamageText(playerCreature, damageLabel);
+                __instance.AddChild(updateTimer);
+            }
+            catch (Exception ex)
+            {
+                ModLogger.Error($"挂载伤害数字 UI 时发生异常: {ex.Message}");
+            }
+        }
+
+        private static Label CreateDamageLabel()
+        {
+            var damageLabel = new Label
+            {
+                Name = DamageLabelNodeName,
+                Text = "",
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                // 高于 EnderLilis 皮肤视觉层(4-6)，但仍留在战斗场景层内，避免盖住地图等全局 UI。
+                ZIndex = DamageLabelZIndex,
+                CustomMinimumSize = new Vector2(200, 50),
+                MouseFilter = Control.MouseFilterEnum.Ignore,
+                Position = new Vector2(-100, ModSettings.HeightOffset)
+            };
+
+            damageLabel.AddThemeFontSizeOverride("font_size", ModSettings.FontSize);
+            damageLabel.AddThemeColorOverride("font_outline_color", ModSettings.OutlineColor);
+            damageLabel.AddThemeConstantOverride("outline_size", ModSettings.OutlineSize);
+
+            return damageLabel;
         }
 
         private const BindingFlags InstanceFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
