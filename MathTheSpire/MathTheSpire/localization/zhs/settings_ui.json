@@ -1,4 +1,11 @@
 {
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_label": "伤害数字显示",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.NAME": "伤害数字字号",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.DESCRIPTION": "头顶伤害数字在 1080p 下的基准字号，实际显示会根据分辨率和 DPI 自动缩放。",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.NAME": "伤害数字水平位置",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.DESCRIPTION": "相对角色中心的水平偏移。负数向左，正数向右；实际显示会随分辨率和 DPI 缩放。",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.NAME": "伤害数字垂直位置",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.DESCRIPTION": "相对角色节点的垂直位置。负数向上，正数向下；实际显示会随分辨率和 DPI 缩放。",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "伤害颜色",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "致命伤害颜色",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "当未被格挡的实际伤害会导致玩家死亡时使用的颜色。修改后会立即用于下一次伤害数字刷新。",

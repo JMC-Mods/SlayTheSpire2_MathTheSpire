@@ -1,4 +1,11 @@
 {
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_label": "Affichage du nombre de degats",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.NAME": "Taille du nombre de degats",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.DESCRIPTION": "Taille de police de base en 1080p. L'affichage s'adapte automatiquement a la resolution et au DPI.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.NAME": "Position horizontale du nombre de degats",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.DESCRIPTION": "Decalage horizontal depuis le centre du personnage. Negatif vers la gauche, positif vers la droite; l'affichage suit la resolution et le DPI.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.NAME": "Position verticale du nombre de degats",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.DESCRIPTION": "Position verticale relative au noeud du personnage. Negatif vers le haut, positif vers le bas; l'affichage suit la resolution et le DPI.",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "Couleurs des degats",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "Couleur des degats mortels",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "Couleur utilisee lorsque les degats non bloques tueraient le joueur. Les changements s'appliquent au prochain rafraichissement du nombre de degats.",

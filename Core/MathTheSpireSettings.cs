@@ -6,7 +6,42 @@ namespace MathTheSpire.Core;
 
 public static class MathTheSpireSettings
 {
+    internal const int MinDamageLabelFontSize = 12;
+    internal const int MaxDamageLabelFontSize = 96;
+    internal const int MinDamageLabelOffsetX = -600;
+    internal const int MaxDamageLabelOffsetX = 600;
+    internal const int MinDamageLabelOffsetY = -800;
+    internal const int MaxDamageLabelOffsetY = 200;
+
+    private const string DamageLabelGroup = "damage_label";
     private const string DamageColorGroup = "damage_colors";
+
+    [UIIntSlider(MinDamageLabelFontSize, MaxDamageLabelFontSize)]
+    [Config(
+        "伤害数字字号",
+        group: DamageLabelGroup,
+        Description = "头顶伤害数字在 1080p 下的基准字号，实际显示会根据分辨率和 DPI 自动缩放。",
+        Key = "damage_label.font_size",
+        Order = 10)]
+    public static int DamageLabelFontSize = 28;
+
+    [UIIntSlider(MinDamageLabelOffsetX, MaxDamageLabelOffsetX)]
+    [Config(
+        "伤害数字水平位置",
+        group: DamageLabelGroup,
+        Description = "头顶伤害数字相对角色中心的水平偏移。负数向左，正数向右，实际显示会自动适配 DPI。",
+        Key = "damage_label.offset_x",
+        Order = 20)]
+    public static int DamageLabelOffsetX = 0;
+
+    [UIIntSlider(MinDamageLabelOffsetY, MaxDamageLabelOffsetY)]
+    [Config(
+        "伤害数字垂直位置",
+        group: DamageLabelGroup,
+        Description = "头顶伤害数字相对角色节点的垂直位置。负数向上，正数向下，实际显示会自动适配 DPI。",
+        Key = "damage_label.offset_y",
+        Order = 30)]
+    public static int DamageLabelOffsetY = -350;
 
     [UIColor("#FF3333", "#E84B4B", "#FF6B6B", Palette = UIColorPalette.Game, AllowAlpha = false)]
     [Config(

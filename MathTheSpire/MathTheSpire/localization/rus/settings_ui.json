@@ -1,4 +1,11 @@
 {
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_label": "Отображение числа урона",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.NAME": "Размер числа урона",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.DESCRIPTION": "Базовый размер шрифта при 1080p. Фактическое отображение автоматически масштабируется по разрешению и DPI.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.NAME": "Горизонтальная позиция числа урона",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.DESCRIPTION": "Горизонтальное смещение от центра персонажа. Отрицательные значения влево, положительные вправо; отображение масштабируется по разрешению и DPI.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.NAME": "Вертикальная позиция числа урона",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.DESCRIPTION": "Вертикальная позиция относительно узла персонажа. Отрицательные значения вверх, положительные вниз; отображение масштабируется по разрешению и DPI.",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "Цвета урона",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "Цвет смертельного урона",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "Цвет, когда непроблокированный урон убьет игрока. Изменения применяются при следующем обновлении числа урона.",

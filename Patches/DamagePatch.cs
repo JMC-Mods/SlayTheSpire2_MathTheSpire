@@ -10,24 +10,25 @@ using MegaCrit.Sts2.Core.Nodes.Combat;
 
 namespace MathTheSpire.Patches
 {
-    public static class ModSettings
-    {
-        public static int FontSize = 28;
-
-        // 字体描边大小和颜色
-        public static int OutlineSize = 6;
-        public static Color OutlineColor = new(0, 0, 0, 1.0f); // 纯黑描边
-
-        // Y轴高度微调 (往上是负数，往下是正数。
-        public static float HeightOffset = -350f;
-    }
-
     [HarmonyPatch(typeof(NCreature), "_Ready")]
     public static class NCreature_Ready_Patch
     {
         private const string DamageLabelNodeName = "MathTheSpireDamageLabel";
         private const string UpdateTimerNodeName = "MathTheSpireDamageTimer";
         private const int DamageLabelZIndex = 7;
+        private const double DamageTextUpdateIntervalSeconds = 0.1;
+        private const float BaseViewportHeight = 1080f;
+        private const float BaseScreenDpi = 96f;
+        private const float MaxRawDpiScale = 4.0f;
+        private const float DpiScaleStrength = 0.35f;
+        private const float MinDamageLabelUiScale = 0.75f;
+        private const float MaxDamageLabelUiScale = 2.0f;
+        private const int DamageLabelBaseWidth = 200;
+        private const int DamageLabelBaseHeight = 50;
+        private const int DamageLabelWidthFontMultiplier = 8;
+        private const int DamageLabelHeightFontMultiplier = 2;
+        private const int DamageLabelOutlineSize = 6;
+        private static readonly Color DamageLabelOutlineColor = new(0, 0, 0, 1.0f);
 
         public static void Postfix(NCreature __instance)
         {
@@ -49,7 +50,7 @@ namespace MathTheSpire.Patches
                 var updateTimer = new Godot.Timer
                 {
                     Name = UpdateTimerNodeName,
-                    WaitTime = 0.1,
+                    WaitTime = DamageTextUpdateIntervalSeconds,
                     Autostart = true
                 };
 
@@ -72,16 +73,116 @@ namespace MathTheSpire.Patches
                 VerticalAlignment = VerticalAlignment.Center,
                 // 高于 EnderLilis 皮肤视觉层(4-6)，但仍留在战斗场景层内，避免盖住地图等全局 UI。
                 ZIndex = DamageLabelZIndex,
-                CustomMinimumSize = new Vector2(200, 50),
-                MouseFilter = Control.MouseFilterEnum.Ignore,
-                Position = new Vector2(-100, ModSettings.HeightOffset)
+                MouseFilter = Control.MouseFilterEnum.Ignore
             };
 
-            damageLabel.AddThemeFontSizeOverride("font_size", ModSettings.FontSize);
-            damageLabel.AddThemeColorOverride("font_outline_color", ModSettings.OutlineColor);
-            damageLabel.AddThemeConstantOverride("outline_size", ModSettings.OutlineSize);
+            ApplyDamageLabelSettings(damageLabel);
 
             return damageLabel;
+        }
+
+        private static void ApplyDamageLabelSettings(Label damageLabel)
+        {
+            int fontSize = Math.Clamp(
+                MathTheSpireSettings.DamageLabelFontSize,
+                MathTheSpireSettings.MinDamageLabelFontSize,
+                MathTheSpireSettings.MaxDamageLabelFontSize);
+            int offsetX = Math.Clamp(
+                MathTheSpireSettings.DamageLabelOffsetX,
+                MathTheSpireSettings.MinDamageLabelOffsetX,
+                MathTheSpireSettings.MaxDamageLabelOffsetX);
+            int offsetY = Math.Clamp(
+                MathTheSpireSettings.DamageLabelOffsetY,
+                MathTheSpireSettings.MinDamageLabelOffsetY,
+                MathTheSpireSettings.MaxDamageLabelOffsetY);
+
+            float uiScale = ResolveDamageLabelUiScale(damageLabel);
+            int scaledFontSize = Math.Clamp(
+                (int)MathF.Round(fontSize * uiScale),
+                MathTheSpireSettings.MinDamageLabelFontSize,
+                (int)MathF.Round(MathTheSpireSettings.MaxDamageLabelFontSize * MaxDamageLabelUiScale));
+            int scaledOutlineSize = Math.Max(1, (int)MathF.Round(DamageLabelOutlineSize * uiScale));
+
+            var minimumSize = new Vector2(
+                Math.Max(DamageLabelBaseWidth * uiScale, scaledFontSize * DamageLabelWidthFontMultiplier),
+                Math.Max(DamageLabelBaseHeight * uiScale, scaledFontSize * DamageLabelHeightFontMultiplier));
+
+            damageLabel.CustomMinimumSize = minimumSize;
+            damageLabel.Position = new Vector2((offsetX * uiScale) - minimumSize.X / 2.0f, offsetY * uiScale);
+            damageLabel.AddThemeFontSizeOverride("font_size", scaledFontSize);
+            damageLabel.AddThemeColorOverride("font_outline_color", DamageLabelOutlineColor);
+            damageLabel.AddThemeConstantOverride("outline_size", scaledOutlineSize);
+        }
+
+        private static float ResolveDamageLabelUiScale(Control control)
+        {
+            float viewportScale = 1.0f;
+
+            try
+            {
+                Vector2 viewportSize = control.GetViewport()?.GetVisibleRect().Size ?? Vector2.Zero;
+                if (viewportSize.Y > 0)
+                {
+                    viewportScale = viewportSize.Y / BaseViewportHeight;
+                }
+            }
+            catch (Exception ex)
+            {
+                ModLogger.Debug($"计算伤害数字视口缩放失败，使用默认缩放: {ex.Message}");
+            }
+
+            return Math.Clamp(
+                Math.Max(viewportScale, ResolveGentleDpiScale()),
+                MinDamageLabelUiScale,
+                MaxDamageLabelUiScale);
+        }
+
+        private static float ResolveGentleDpiScale()
+        {
+            int dpi = GetCurrentScreenDpi();
+            if (dpi <= BaseScreenDpi)
+            {
+                return 1.0f;
+            }
+
+            float rawDpiScale = Math.Clamp(dpi / BaseScreenDpi, 1.0f, MaxRawDpiScale);
+            return 1.0f + ((MathF.Sqrt(rawDpiScale) - 1.0f) * DpiScaleStrength);
+        }
+
+        private static int GetCurrentScreenDpi()
+        {
+            try
+            {
+                return DisplayServer.ScreenGetDpi(GetCurrentScreen());
+            }
+            catch
+            {
+                return (int)BaseScreenDpi;
+            }
+        }
+
+        private static int GetCurrentScreen()
+        {
+            try
+            {
+                int screen = DisplayServer.WindowGetCurrentScreen(0);
+                if (screen >= 0)
+                {
+                    return screen;
+                }
+            }
+            catch
+            {
+            }
+
+            try
+            {
+                return DisplayServer.GetPrimaryScreen();
+            }
+            catch
+            {
+                return 0;
+            }
         }
 
         private const BindingFlags InstanceFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
@@ -155,6 +256,8 @@ namespace MathTheSpire.Patches
             try
             {
                 if (!GodotObject.IsInstanceValid(damageLabel)) return;
+
+                ApplyDamageLabelSettings(damageLabel);
 
                 var combatState = GetCombatStateCompat(playerCreature);
 

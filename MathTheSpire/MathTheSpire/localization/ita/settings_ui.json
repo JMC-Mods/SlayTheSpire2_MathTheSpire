@@ -1,4 +1,11 @@
 {
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_label": "Visualizzazione numero danni",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.NAME": "Dimensione numero danni",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.DESCRIPTION": "Dimensione base del font a 1080p. La visualizzazione si adatta automaticamente a risoluzione e DPI.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.NAME": "Posizione orizzontale numero danni",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.DESCRIPTION": "Offset orizzontale dal centro del personaggio. Negativo a sinistra, positivo a destra; la visualizzazione scala con risoluzione e DPI.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.NAME": "Posizione verticale numero danni",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.DESCRIPTION": "Posizione verticale relativa al nodo del personaggio. Negativo verso l'alto, positivo verso il basso; la visualizzazione scala con risoluzione e DPI.",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "Colori danno",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "Colore danno letale",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "Colore usato quando il danno non bloccato ucciderebbe il giocatore. Le modifiche si applicano al prossimo aggiornamento del numero di danno.",

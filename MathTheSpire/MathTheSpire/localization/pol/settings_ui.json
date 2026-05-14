@@ -1,4 +1,11 @@
 {
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_label": "Wyswietlanie liczby obrazen",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.NAME": "Rozmiar liczby obrazen",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.DESCRIPTION": "Bazowy rozmiar czcionki przy 1080p. Rzeczywisty widok skaluje sie automatycznie z rozdzielczoscia i DPI.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.NAME": "Pozycja pozioma liczby obrazen",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.DESCRIPTION": "Przesuniecie poziome od srodka postaci. Wartosci ujemne w lewo, dodatnie w prawo; widok skaluje sie z rozdzielczoscia i DPI.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.NAME": "Pozycja pionowa liczby obrazen",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.DESCRIPTION": "Pozycja pionowa wzgledem wezla postaci. Wartosci ujemne w gore, dodatnie w dol; widok skaluje sie z rozdzielczoscia i DPI.",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "Kolory obrazen",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "Kolor smiertelnych obrazen",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "Kolor uzywany, gdy nieblokowane obrazenia zabilby gracza. Zmiany obowiazuja od nastepnego odswiezenia liczby obrazen.",

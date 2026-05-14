@@ -1,4 +1,11 @@
 {
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_label": "Visualizacion del numero de dano",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.NAME": "Tamano del numero de dano",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.DESCRIPTION": "Tamano base de fuente a 1080p. La visualizacion se escala automaticamente con la resolucion y el DPI.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.NAME": "Posicion horizontal del numero de dano",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.DESCRIPTION": "Desplazamiento horizontal desde el centro del personaje. Negativo a la izquierda, positivo a la derecha; la visualizacion escala con resolucion y DPI.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.NAME": "Posicion vertical del numero de dano",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.DESCRIPTION": "Posicion vertical relativa al nodo del personaje. Negativo hacia arriba, positivo hacia abajo; la visualizacion escala con resolucion y DPI.",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "Colores de dano",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "Color de dano letal",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "Color usado cuando el dano no bloqueado mataria al jugador. Los cambios se aplican en la siguiente actualizacion del numero de dano.",

@@ -1,4 +1,11 @@
 {
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_label": "ダメージ数字表示",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.NAME": "ダメージ数字のサイズ",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.DESCRIPTION": "1080p での基準フォントサイズです。実際の表示は解像度と DPI に応じて自動調整されます。",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.NAME": "ダメージ数字の横位置",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.DESCRIPTION": "キャラクター中央からの横方向オフセットです。負の値は左、正の値は右へ移動し、表示は解像度と DPI に応じて拡大縮小されます。",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.NAME": "ダメージ数字の縦位置",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.DESCRIPTION": "キャラクターノードからの縦方向位置です。負の値は上、正の値は下へ移動し、表示は解像度と DPI に応じて拡大縮小されます。",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "ダメージ色",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "致命ダメージの色",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "ブロックされなかった実ダメージでプレイヤーが倒れる場合に使う色です。変更は次回のダメージ表示更新から反映されます。",

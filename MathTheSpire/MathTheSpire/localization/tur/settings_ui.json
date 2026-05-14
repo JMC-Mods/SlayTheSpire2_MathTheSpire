@@ -1,4 +1,11 @@
 {
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_label": "Hasar sayisi gosterimi",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.NAME": "Hasar sayisi yazi boyutu",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.DESCRIPTION": "1080p icin temel yazi boyutu. Gercek gosterim coznurluk ve DPI ile otomatik olceklenir.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.NAME": "Hasar sayisi yatay konumu",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.DESCRIPTION": "Karakter merkezinden yatay kaydirma. Negatif sola, pozitif saga gider; gosterim coznurluk ve DPI ile olceklenir.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.NAME": "Hasar sayisi dikey konumu",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.DESCRIPTION": "Karakter dugumune gore dikey konum. Negatif yukari, pozitif asagi gider; gosterim coznurluk ve DPI ile olceklenir.",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "Hasar renkleri",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "Olumcul hasar rengi",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "Engellenmeyen hasar oyuncuyu oldurecekse kullanilan renk. Degisiklikler bir sonraki hasar sayisi yenilemesinde uygulanir.",

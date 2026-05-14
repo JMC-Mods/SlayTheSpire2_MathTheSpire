@@ -1,4 +1,11 @@
 {
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_label": "Schadenszahl-Anzeige",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.NAME": "Schriftgroesse der Schadenszahl",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.DESCRIPTION": "Basisschriftgroesse bei 1080p. Die Anzeige skaliert automatisch mit Aufloesung und DPI.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.NAME": "Horizontale Position der Schadenszahl",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.DESCRIPTION": "Horizontaler Versatz zur Charaktermitte. Negative Werte nach links, positive nach rechts; die Anzeige skaliert mit Aufloesung und DPI.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.NAME": "Vertikale Position der Schadenszahl",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.DESCRIPTION": "Vertikale Position relativ zum Charakterknoten. Negative Werte nach oben, positive nach unten; die Anzeige skaliert mit Aufloesung und DPI.",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "Schadensfarben",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "Farbe fuer toedlichen Schaden",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "Farbe, wenn ungeblockter Schaden den Spieler toeten wuerde. Aenderungen gelten ab der naechsten Aktualisierung der Schadenszahl.",

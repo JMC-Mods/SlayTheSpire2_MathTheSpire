@@ -1,4 +1,11 @@
 {
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_label": "การแสดงตัวเลขความเสียหาย",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.NAME": "ขนาดตัวเลขความเสียหาย",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.DESCRIPTION": "ขนาดตัวอักษรพื้นฐานที่ 1080p การแสดงผลจริงจะปรับตามความละเอียดและ DPI โดยอัตโนมัติ",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.NAME": "ตำแหน่งแนวนอนของตัวเลขความเสียหาย",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.DESCRIPTION": "ระยะเลื่อนแนวนอนจากกึ่งกลางตัวละคร ค่าลบไปทางซ้าย ค่าบวกไปทางขวา และจะปรับตามความละเอียดกับ DPI",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.NAME": "ตำแหน่งแนวตั้งของตัวเลขความเสียหาย",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.DESCRIPTION": "ตำแหน่งแนวตั้งเทียบกับโหนดตัวละคร ค่าลบขึ้นบน ค่าบวกลงล่าง และจะปรับตามความละเอียดกับ DPI",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "สีความเสียหาย",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "สีความเสียหายถึงตาย",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "สีที่ใช้เมื่อความเสียหายจริงที่ไม่ถูกบล็อกจะทำให้ผู้เล่นตาย การเปลี่ยนแปลงจะมีผลในการรีเฟรชตัวเลขความเสียหายครั้งถัดไป",

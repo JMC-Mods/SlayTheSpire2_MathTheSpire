@@ -1,4 +1,11 @@
 {
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_label": "피해 숫자 표시",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.NAME": "피해 숫자 글자 크기",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.font_size.DESCRIPTION": "1080p 기준 글자 크기입니다. 실제 표시는 해상도와 DPI에 따라 자동으로 조정됩니다.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.NAME": "피해 숫자 가로 위치",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_x.DESCRIPTION": "캐릭터 중심 기준 가로 오프셋입니다. 음수는 왼쪽, 양수는 오른쪽이며 실제 표시는 해상도와 DPI에 맞춰 조정됩니다.",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.NAME": "피해 숫자 세로 위치",
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_label.offset_y.DESCRIPTION": "캐릭터 노드 기준 세로 위치입니다. 음수는 위, 양수는 아래이며 실제 표시는 해상도와 DPI에 맞춰 조정됩니다.",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.GROUP.damage_colors": "피해 색상",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.NAME": "치명 피해 색상",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.lethal.DESCRIPTION": "막지 못한 실제 피해로 플레이어가 사망할 때 사용하는 색상입니다. 변경 사항은 다음 피해 숫자 갱신부터 적용됩니다.",
