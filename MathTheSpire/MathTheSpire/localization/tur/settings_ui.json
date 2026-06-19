@@ -12,5 +12,7 @@
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "Yaralanma uyari rengi",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "Blok yeterli degil ama hasar olumcul degilse kullanilan renk. Degisiklikler bir sonraki yenilemede uygulanir.",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "Guvenli blok rengi",
-  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Mevcut blok gelen hasari tamamen emebiliyorsa kullanilan renk. Degisiklikler bir sonraki yenilemede uygulanir."
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Mevcut blok gelen hasari tamamen emebiliyorsa kullanilan renk. Degisiklikler bir sonraki yenilemede uygulanir.",
+  "EXTENSION.MATHTHESPIRE.DECK_VIEW.CARD_REMOVAL_PRICE": "Sonraki kart silme: {Price}",
+  "EXTENSION.MATHTHESPIRE.DECK_VIEW.CARD_REMOVAL_UNAVAILABLE": "Kart silme kullanilamaz"
 }

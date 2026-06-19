@@ -12,5 +12,7 @@
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "Couleur d'avertissement",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "Couleur utilisee lorsque le blocage ne suffit pas, mais que les degats ne sont pas mortels. Les changements s'appliquent au prochain rafraichissement.",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "Couleur de blocage sur",
-  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Couleur utilisee lorsque le blocage actuel absorbe tous les degats entrants. Les changements s'appliquent au prochain rafraichissement."
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Couleur utilisee lorsque le blocage actuel absorbe tous les degats entrants. Les changements s'appliquent au prochain rafraichissement.",
+  "EXTENSION.MATHTHESPIRE.DECK_VIEW.CARD_REMOVAL_PRICE": "Prochain retrait de carte : {Price}",
+  "EXTENSION.MATHTHESPIRE.DECK_VIEW.CARD_REMOVAL_UNAVAILABLE": "Retrait de carte indisponible"
 }

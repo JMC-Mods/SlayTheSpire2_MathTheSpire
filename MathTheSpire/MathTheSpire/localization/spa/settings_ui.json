@@ -12,5 +12,7 @@
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "Color de aviso de dano",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "Color usado cuando el bloqueo no basta, pero el dano no es letal. Los cambios se aplican en la siguiente actualizacion.",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "Color de bloqueo seguro",
-  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Color usado cuando el bloqueo actual puede absorber todo el dano entrante. Los cambios se aplican en la siguiente actualizacion."
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Color usado cuando el bloqueo actual puede absorber todo el dano entrante. Los cambios se aplican en la siguiente actualizacion.",
+  "EXTENSION.MATHTHESPIRE.DECK_VIEW.CARD_REMOVAL_PRICE": "Proxima eliminacion de carta: {Price}",
+  "EXTENSION.MATHTHESPIRE.DECK_VIEW.CARD_REMOVAL_UNAVAILABLE": "Eliminacion de carta no disponible"
 }

@@ -12,5 +12,7 @@
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "Kolor ostrzezenia o obrazeniach",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "Kolor uzywany, gdy blok jest niewystarczajacy, ale obrazenia nie sa smiertelne. Zmiany obowiazuja od nastepnego odswiezenia.",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "Kolor bezpiecznego bloku",
-  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Kolor uzywany, gdy obecny blok w pelni pochlonie nadchodzace obrazenia. Zmiany obowiazuja od nastepnego odswiezenia."
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "Kolor uzywany, gdy obecny blok w pelni pochlonie nadchodzace obrazenia. Zmiany obowiazuja od nastepnego odswiezenia.",
+  "EXTENSION.MATHTHESPIRE.DECK_VIEW.CARD_REMOVAL_PRICE": "Nastepne usuniecie karty: {Price}",
+  "EXTENSION.MATHTHESPIRE.DECK_VIEW.CARD_REMOVAL_UNAVAILABLE": "Usuwanie kart niedostepne"
 }

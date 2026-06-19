@@ -12,5 +12,7 @@
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "สีเตือนการบาดเจ็บ",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "สีที่ใช้เมื่อบล็อกไม่พอ แต่ความเสียหายยังไม่ถึงตาย การเปลี่ยนแปลงจะมีผลในการรีเฟรชครั้งถัดไป",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "สีบล็อกปลอดภัย",
-  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "สีที่ใช้เมื่อบล็อกปัจจุบันสามารถรับความเสียหายที่จะเข้ามาได้ทั้งหมด การเปลี่ยนแปลงจะมีผลในการรีเฟรชครั้งถัดไป"
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "สีที่ใช้เมื่อบล็อกปัจจุบันสามารถรับความเสียหายที่จะเข้ามาได้ทั้งหมด การเปลี่ยนแปลงจะมีผลในการรีเฟรชครั้งถัดไป",
+  "EXTENSION.MATHTHESPIRE.DECK_VIEW.CARD_REMOVAL_PRICE": "ลบการ์ดครั้งถัดไป: {Price}",
+  "EXTENSION.MATHTHESPIRE.DECK_VIEW.CARD_REMOVAL_UNAVAILABLE": "ไม่สามารถลบการ์ดได้"
 }

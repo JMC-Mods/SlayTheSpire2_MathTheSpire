@@ -12,5 +12,7 @@
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.NAME": "受伤警告颜色",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.warning.DESCRIPTION": "当护甲不足但不会致死时使用的颜色。修改后会立即用于下一次伤害数字刷新。",
   "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.NAME": "安全格挡颜色",
-  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "当当前护甲可以完全格挡即将受到的伤害时使用的颜色。修改后会立即用于下一次伤害数字刷新。"
+  "EXTENSION.JMCMODLIB.CONFIG.MathTheSpire.damage_colors.safe.DESCRIPTION": "当当前护甲可以完全格挡即将受到的伤害时使用的颜色。修改后会立即用于下一次伤害数字刷新。",
+  "EXTENSION.MATHTHESPIRE.DECK_VIEW.CARD_REMOVAL_PRICE": "下次删牌：{Price}",
+  "EXTENSION.MATHTHESPIRE.DECK_VIEW.CARD_REMOVAL_UNAVAILABLE": "删牌不可用"
 }
